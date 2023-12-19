@@ -10,9 +10,6 @@ nato_dict = { row.letter:row.code for (index, row) in nato_df.iterrows()}
 
 word = input("Enter a word : ").upper()
 
-List = []
-
-for letters in word:
-    List.append(nato_dict[letters])
+List = [ nato_dict[letter] for letter in word]
 
 print(List)
